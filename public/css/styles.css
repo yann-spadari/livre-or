@@ -1,0 +1,373 @@
+/* FONT CSS IMPORT */
+
+@font-face {
+    font-family: "Radicals";
+    src: url("../fonts/Radicals.ttf");
+}
+
+@font-face {
+    font-family: "Bagnard";
+    src: url("../fonts/Bagnard.otf");
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+/* RESET & GLOBAL CSS */
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;  
+    background-color: #131313;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a { color:black; }
+
+/* HEADER CSS */
+
+header nav{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+
+}
+
+header nav ul li{
+    flex: auto;
+    text-align: center;
+    position: relative;  
+}
+
+header nav a{
+    display: block;
+    text-decoration: none;
+    color: rgb(255,215,0);
+    border-bottom: 2px solid transparent;
+    font-size: 1.2rem;
+    transition: all 0.4s ease-in-out;
+    padding: 0 40px;
+}
+
+header .logo {
+    font-size: 1.1rem;
+    display: flex;
+}
+
+header .logo img {
+    margin: -4px;
+}
+
+header .logo a {
+    margin-left: 4px;
+    font-family: 'Bagnard', sans-serif;
+
+}
+
+header ul a:hover{
+    color:white;
+}
+
+.header::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+
+.header::after:hover {
+    width: 100%;
+}
+
+/* MAIN CSS */
+
+main {
+    min-height: 78vh;
+}
+/* ACCUEIL CSS */
+
+.home_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.home_text h1 {
+    font-family: 'Bagnard', sans-serif;
+    color: white;
+    font-size: 130px;
+    margin-top: 110px;
+    letter-spacing: 3px;
+    color:rgb(255,215,0);
+}
+
+.home_text p {
+
+    color: white;
+    font-size: 30px;
+    color:rgb(255,215,0);
+}
+
+.home_text a {
+    font-size: 22px;
+    color:rgb(255,215,0);
+    margin: 30px 0;
+    border: 2px solid;
+    padding: 10px 10px;
+    border-radius: 20px; 
+    transition: 0.5s ease-out;  
+}
+
+.home_text a:hover{
+    color: black;
+    background-color: rgb(255,215,0)    ;
+}
+
+/* FORMULAIRE CONNEXION & INSCRIPTION & PROFIL CSS */
+
+.center{
+    margin-top: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+.center h1{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+  }
+  
+.center form{
+    padding: 0 40px;
+  }
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+    }
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+    }
+    
+.pass:hover{
+    text-decoration: underline;
+    }
+         
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    }
+
+.center input[type="submit"]{
+    margin-top:5px;
+    width: 100%;
+    height: 50px;
+    background: black;
+    color: rgb(255,215,0);
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    }
+  
+textarea {
+    margin: 14px 0;
+    resize: none;
+    width: 320px;
+    height: 100px;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #adadad;
+    padding: 2rem;
+}    
+
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+  }
+  
+#warning {
+    font-size: 13px;
+    text-align: center;
+    margin: 10px 10px;
+    color:rgb(207, 89, 89);
+}
+
+.heure {
+    display: flex;
+    justify-content: center;
+}
+
+.center select {
+    margin: 0 15px; 
+    font-size: 16px;    
+}
+
+/* ERREUR CSS */
+
+.error_php {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgb(207, 89, 89);
+}
+
+.error2_php {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgb(207, 89, 89);
+}
+
+/* SUCCES PHP */
+
+.success_php {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(22, 165, 70);
+}
+
+/* PAGE LIVRE OR CSS */
+
+.livreor_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.livreor_text h1 {
+    font-family: 'Bagnard', sans-serif;
+    color: white;
+    font-size: 70px;
+    margin-top: 150px;
+    letter-spacing: 3px;
+    color:rgb(255,215,0);
+}
+
+.livreor_text p {
+
+    color: white;
+    margin: 30px 0; 
+    font-size: 20px;
+    color:rgb(255,215,0);
+}
+
+.livreor_text a {
+    color:rgb(255,215,0);
+    transition: 0.4s ease;
+}
+
+.livreor_text a:hover{
+    color: white;
+}
+
+/* COMMENTAIRES CSS */
+
+.commentaire {
+    margin: 30px 0;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 1rem 2rem;
+    margin: 0rem 30rem;
+    font-size: 1.4rem;
+}
+
+.commentaire p {
+    margin-bottom : 10px;
+}
+
+.com_container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+}
+
+/* FOOTER CSS */
+
+footer {
+    min-inline-size: 70rem;
+    position:absolute;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+footer ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 1.4%;
+}
+
+.bar_footer {
+    font-size: 1.2rem;
+    color: white;
+}
+
+footer ul li a{
+	color: white;
+    font-size: 1.2rem;
+	text-decoration: none;
+    margin: 30px 0;
+    color:  rgb(255,215,0);
+
+}
+
+
+
