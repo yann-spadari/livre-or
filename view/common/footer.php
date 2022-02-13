@@ -19,7 +19,7 @@
 
         <?php endif ?>
         
-        <li><a href="#">Github</a></li>
+        <li><a href="https://github.com/yann-spadari/livre-or">Github</a></li>
     
     </ul>
 
